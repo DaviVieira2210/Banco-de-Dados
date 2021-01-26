@@ -29,7 +29,11 @@ public class Produtos {
 	private String categoria;	
 	
 	@NotNull
-	private float preco;
+	@Size(min = 2, max = 100)
+	private String codigo;
+	
+	@NotNull
+	private double preco;
 
 	public long getId() {
 		return id;
@@ -39,12 +43,12 @@ public class Produtos {
 		this.id = id;
 	}
 
-	public String getNome() {
+	public String getTitulo() {
 		return titulo;
 	}
 
-	public void setNome(String nome) {
-		this.titulo = nome;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public String getDescricao() {
@@ -62,8 +66,17 @@ public class Produtos {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
+	
+	public String getCodigo() {
+		return codigo;
+	}
 
-	public float getPreco() {
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public double getPreco() {
 		return preco;
 	}
 
